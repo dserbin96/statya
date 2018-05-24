@@ -1,9 +1,8 @@
-
- При разработке приложений мы сталкиваемся с такой проблемой как отображение загружающихся данных. Как правило используют ProgressDialog, но начиная с API 26, класс объявлен устаревшим. В последнее время стало популярным использовать анимацию skeleton и этому есть пример, приложение Facebook. Существует большое количество библиотек, реализующих эту анимацию. Но в рамках этой статьи, я бы хотел рассказать о библиотеке – Skeleton Android.
+        При разработке приложений мы сталкиваемся с такой проблемой как отображение загружающихся данных. Как правило используют *ProgressDialog*, но начиная с *API 26*, класс объявлен устаревшим. В последнее время стало популярным использовать анимацию *skeleton* и этому есть пример, приложение Facebook. Существует большое количество библиотек, реализующих эту анимацию. Но в рамках этой статьи, я бы хотел рассказать о библиотеке – *Skeleton Android*.
 
 # Анимация Skeleton.
 
- Скелетная анимация – это технология анимации, в которой объект представлен двумя частями: поверхностной представление (что называется кожа или сетка) и совокупность взаимосвязанных частей (так называемый скелет).
+**Скелетная анимация** – это технология анимации, в которой объект представлен двумя частями: поверхностной представление (что называется кожа или сетка) и совокупность взаимосвязанных частей (так называемый скелет).
  
 
 ![Пример1](https://drive.google.com/uc?export=view&id=17EAPJHGXEfXn1mtSO_MjRagZjFLSy5Pl)
@@ -43,15 +42,15 @@ dependencies {
     </io.rmiri.skeleton.SkeletonGroup>
 ~~~
 
- SkeletonGroup – контейнер, который включает в себя все используемые для этой анимации views. 
-Ниже приведен неполный список атрибутов SkeletonGroup:
-* SK_animationAutoStart:  если значение true то анимация будет происходить автоматически, false будет происходить при вызове метода startAnimation (по умолчанию true)
-* SK_animationDuration: время анимации (по умолчанию 1000 миллисекунд)
-* SK_animationDirection: как будет двигаться линия в анимации RTL,LTR,BTT,TTB (по умолчанию LTR)
-* SK_animationNormalType: какая анимация будет происходит во время ее выполения: none,alpha,gradient ( по умолчанию gradient)
-* SK_animationFinishType: какая анимация будет происходит в конце ее выполения: none,alpha,gradient ( по умолчанию gradient)
+**SkeletonGroup** – контейнер, который включает в себя все используемые для этой анимации *views*. 
+Ниже приведен неполный список атрибутов *SkeletonGroup*:
+* *SK_animationAutoStart:*  если значение *true* то анимация будет происходить автоматически, *false* будет происходить при вызове метода *startAnimation* (по умолчанию *true*)
+* *SK_animationDuration:* время анимации (по умолчанию 1000 миллисекунд)
+* *SK_animationDirection:* как будет двигаться линия в анимации *RTL,LTR,BTT,TTB* (по умолчанию *LTR*)
+* *SK_animationNormalType:* какая анимация будет происходит во время ее выполения: *none,alpha,gradient* ( по умолчанию *gradient*)
+* *SK_animationFinishType:* какая анимация будет происходит в конце ее выполения: *none,alpha,gradient* ( по умолчанию *gradient*)
 
-Пример использования SK_animationFinishType="gradient" и SK_animationNormalType="alpha":
+Пример использования *SK_animationFinishType="gradient"* и *SK_animationNormalType="alpha"*:
 
 ![альфаГрадиент1](https://drive.google.com/uc?export=view&id=1hBmetsZVLaBX_FeIgaPScMJCCPehk-Gb)
 
@@ -65,17 +64,18 @@ dependencies {
     android:layout_height="wrap_content">
 ~~~
 
-* SK_backgroundMainColor: background всего SkeletonGroup
-* SK_BackgroundViewsColor: background SkeletonViews внутри SkeletonGroup
-* SK_highLightColor: цвет линии в анимации
-* SkeletonView – обертка над view. Он также имеет собственные атрибуты:
-* SK_shapeType: тип анимации skeleton для конкретного view: rect, oval,text ( по умолчанию rect)
-* SK_textLineNumber: количество линий отображаемых при типе text (поумолчанию 3)
-* SK_textLineLastWidth: ширина последней отображаемой строчки при типе text: full, threeQuarters, half, quarter (по умолчанию threeQuarters)
-* SK_textLineHeight: высота линий при типе text (по умолчанию 24dp)
-* SK_textLineSpaceVertical: расстояние между линиями при типе text (по умолчанию threeQuarters 4dp)
+* *SK_backgroundMainColor:* background всего *SkeletonGroup*
+* *SK_BackgroundViewsColor:* background *SkeletonViews* внутри *SkeletonGroup*
+* *SK_highLightColor:* цвет линии в анимации
 
-Пример испоьзования SK_shapeType="oval" и SK_shapeType="text":
+**SkeletonView** – обертка над *view*. Он также имеет собственные атрибуты:
+* *SK_shapeType:* тип анимации *skeleton* для конкретного *view: rect, oval,text* ( по умолчанию *rect*)
+* *SK_textLineNumber:* количество линий отображаемых при типе *text* (поумолчанию 3)
+* *SK_textLineLastWidth:* ширина последней отображаемой строчки при типе text: *full, threeQuarters, half, quarter* (по умолчанию *threeQuarters*)
+* *SK_textLineHeight:* высота линий при типе text (по умолчанию 24dp)
+* *SK_textLineSpaceVertical:* расстояние между линиями при типе text (по умолчанию threeQuarters 4dp)
+
+Пример испоьзования *SK_shapeType="oval"* и *SK_shapeType="text"*:
 
 ![текстКруг1](https://drive.google.com/uc?export=view&id=1kapSlh_WuNgA_ByIZ7-iRFu0rllkVEuc)
 
@@ -122,13 +122,13 @@ dependencies {
         </io.rmiri.skeleton.SkeletonView>
 ~~~
 # Класс SkeletonGroup.
- Класс SkeletonGroup мы использовали в xml файле, он содержит следующие методы:
-* startAnimation() – запуск анимации
-* finishAnimation() – завершение анимации
-* setAutoPlay(true) – автоматический запуск анимации
-* setShowSkeleton(true) – включение анимации
+ Класс *SkeletonGroup* мы использовали в *xml* файле, он содержит следующие методы:
+* *startAnimation()* – запуск анимации
+* *finishAnimation()* – завершение анимации
+* *setAutoPlay(true)* – автоматический запуск анимации
+* *setShowSkeleton(true)* – включение анимации
 
-Также SkeletonGroup содержит свой listener
+Также *SkeletonGroup* содержит свой *listener*
 ~~~ kotlin
 skeletoneGroup.setSkeletonListener(object : SkeletonGroup.SkeletonListener { 
   override fun onFinishAnimation() {       
@@ -143,7 +143,7 @@ skeletoneGroup.setSkeletonListener(object : SkeletonGroup.SkeletonListener {
 ~~~
 
 # Применение Skeleton в RecyclerView.
-В версии v1.0.9 появилась возможность применять данную анимацию в RecyclerView. Для этого необходимо создать свой собственный адаптер наследуясь от AdapterSkeleton, код будет выглядеть следующим образом:
+В версии *v1.0.9* появилась возможность применять данную анимацию в *RecyclerView*. Для этого необходимо создать свой собственный адаптер наследуясь от *AdapterSkeleton*, код будет выглядеть следующим образом:
  ~~~ kotlin 
 class MyAndroidSkeletonAdapter() : AdapterSkeleton<ExampleViewModel, ViewHolder>() {
 
@@ -188,15 +188,15 @@ class MyAndroidSkeletonAdapter() : AdapterSkeleton<ExampleViewModel, ViewHolder>
 ~~~
 
 
-Интерфейс isCanSetAdapterListener – для создания анимации SkeltonAdapter должен знать размеры элмента внутри RecyclerView, после определения размера listener позволяет нам сетить адаптер в RecyclerView.
+Интерфейс *isCanSetAdapterListener* – для создания анимации *SkeltonAdapter* должен знать размеры элмента внутри *RecyclerView*, после определения размера *listener* позволяет нам сетить адаптер в *RecyclerView*.
  ~~~java
 public interface IsCanSetAdapterListener {
     void isCanSet();
 }
 ~~~
-Метод measureHeightRecyclerViewAndItem определяет состояние RecyclerView для использования анимации, передает параметры в SkeletonConfig.Класс SkeletonConfig предназначен для работы c RecyclerView, его метод isSkeletonIsOn необходим для завершения анимации.
+Метод *measureHeightRecyclerViewAndItem* определяет состояние *RecyclerView* для использования анимации, передает параметры в *SkeletonConfig*. Класс *SkeletonConfig* предназначен для работы c *RecyclerView*, его метод *isSkeletonIsOn* необходим для завершения анимации.
 
 ![адаптерLib1](https://drive.google.com/uc?export=view&id=1FIoqyFKTa__UfaonQmki2fyr23qIyja1)
 
 # Почему же все-таки SkeletonAndroid?
-В чем-же преимущества данной библиотеки? Во первых сама анимация, при завершение которой осуществляется плавный переход из состояния загрузки во View которое должно отображаться, во вторых анимация позволяет работать с RecyclerView, что является огромным преимуществом по сравнению с другими подобными библиотеками. Если использовать библиотеку с приложения facebook, то нам придется создавать свой собственный адаптер для RecyclerView или подключать библиотеку в которой создан подобный адаптер, что не очень хорошо. Подводя итог хочу сказать, что несмотря на небольшое количество звезд библиотека довольно мощная хоть и небольшая.
+В чем-же преимущества данной библиотеки? Во первых сама анимация, при завершение которой осуществляется плавный переход из состояния загрузки во *View* которое должно отображаться, во вторых анимация позволяет работать с *RecyclerView*, что является огромным преимуществом по сравнению с другими подобными библиотеками. Если использовать библиотеку с приложения Facebook, то нам придется создавать свой собственный адаптер для *RecyclerView* или подключать библиотеку в которой создан подобный адаптер, что не очень хорошо. Подводя итог хочу сказать, что несмотря на небольшое количество звезд библиотека довольно мощная хоть и небольшая.
