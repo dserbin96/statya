@@ -5,7 +5,7 @@
 **Скелетная анимация** – это технология анимации, в которой объект представлен двумя частями: поверхностной представление (что называется кожа или сетка) и совокупность взаимосвязанных частей (так называемый скелет).
  
 
-![Пример1](https://drive.google.com/uc?export=view&id=17EAPJHGXEfXn1mtSO_MjRagZjFLSy5Pl)
+![Пример1](https://drive.google.com/uc?export=view&id=11UlrtcxfoRQy3dpiQe__bvMns8hvypmv)
 
 # Добавление в проект.
  ~~~ gradle
@@ -52,7 +52,7 @@ dependencies {
 
 Пример использования *SK_animationFinishType="gradient"* и *SK_animationNormalType="alpha"*:
 
-![альфаГрадиент1](https://drive.google.com/uc?export=view&id=1hBmetsZVLaBX_FeIgaPScMJCCPehk-Gb)
+![альфаГрадиент1](https://drive.google.com/uc?export=view&id=1oxiUfjPvhngwoefKbejjTMrYPx13Eb1j)
 
  ~~~ xml
 <io.rmiri.skeleton.SkeletonGroup
