@@ -13,7 +13,7 @@
 
 ![sha](https://drive.google.com//uc?export=view&id=1vrQkZIM3bSNtf6x5NHwhj0_Foyqv9ePs)
 
-![ska](https://drive.google.com/open?/uc?export=view&id=10TywYALbwfYbDEFyvEQcWAjAaCVRpDfb)
+![ska](https://drive.google.com/uc?export=view&id=10TywYALbwfYbDEFyvEQcWAjAaCVRpDfb)
 
 # Добавление в проект.
  ~~~ gradle
