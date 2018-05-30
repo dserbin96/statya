@@ -5,7 +5,7 @@
 **Скелетная анимация** – это технология анимации, в которой объект представлен двумя частями: поверхностной представление (что называется кожа или сетка) и совокупность взаимосвязанных частей (так называемый скелет). Скелетная анимация часто используется в разработке, например при создание компьютерных игр. Так же ее можно применить и в *Android* разработке.  Одним из таких примеров является применение *Skeleton Android*.
  
 
-![Пример1](https://drive.google.com/uc?export=view&id=11UlrtcxfoRQy3dpiQe__bvMns8hvypmv)
+![Пример2](https://drive.google.com/uc?export=view&id=1NRc3tbKCl3vxTL-XsTitY_Sdz8M2Of-Y)
 
 # Сравнение с другими библиотеками.
 
@@ -89,7 +89,7 @@ dependencies {
 
 Пример испоьзования *SK_shapeType="oval"* и *SK_shapeType="text"*:
 
-![текстКруг1](https://drive.google.com/uc?export=view&id=1kapSlh_WuNgA_ByIZ7-iRFu0rllkVEuc)
+![текстКруг2](https://drive.google.com/uc?export=view&id=1YUpsAIHmvUw1h9Zw5YgtW1ivza-Y1BRE)
 
  ~~~ xml
         <io.rmiri.skeleton.SkeletonView
@@ -208,9 +208,7 @@ public interface IsCanSetAdapterListener {
 ~~~
 Метод *measureHeightRecyclerViewAndItem* определяет состояние *RecyclerView* для использования анимации, передает параметры в *SkeletonConfig*. Класс *SkeletonConfig* предназначен для работы c *RecyclerView*, его метод *isSkeletonIsOn* необходим для завершения анимации.
 
-![адаптерLib1](https://drive.google.com/uc?export=view&id=1FIoqyFKTa__UfaonQmki2fyr23qIyja1)
+![адаптерLib2](https://drive.google.com/uc?export=view&id=1HPrFJEJ3E_j_VPbFl6SOOjjixHIEdQPb)
 
-# Почему же все-таки SkeletonAndroid?
-В чем-же преимущества данной библиотеки? Во первых сама анимация, при завершение которой осуществляется плавный переход из состояния загрузки во *View* которое должно отображаться, во вторых анимация позволяет работать с *RecyclerView*, что является огромным преимуществом по сравнению с другими подобными библиотеками. В третьих все элементы поделены на разные части, что позволяет применять различную анимацию к элементам, в отличие от *shimmer-а* от facebook. Подводя итог хочу сказать, что несмотря на небольшое количество звезд библиотека довольно мощная хоть и небольшая.
-
-
+# Вывод
+*Skeleton Android* очень полезен для применения, он содержит внутри себя множество методов, позволющих давольно просто пименять библиотеку в проектах. Так же библиотека гибка, позволяет работать с различными View. Несмотря на небольшое колличество звезд, библиотека давольно мощная.
