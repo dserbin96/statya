@@ -15,7 +15,7 @@
 
 Еще одним преимуществом является встроенный адаптер для *RecyclerView*. Не каждая библиотека может похвастаться такой важной особенностью, обычно если встречается подобная библиотека, приходится самому создавать адаптер и как то управляться с анимацией, к сожалению не всегда получается это сделать. Например *Shimmer от facebook* не предназначена для работы с *RecyclerView*. Можно попробовать ее внедрить во *ViewHolder* и теоретически работать она будет нормально, на практике совершенно другой результат, но это не главный минус. Самый отрицательный момент *Shimmer от facebook* - это блики при большом размере анимированной области, *skeleton* же работает без сбоев.
 
-![sha](https://drive.google.com//uc?export=view&id=1vrQkZIM3bSNtf6x5NHwhj0_Foyqv9ePs) ![адаптерLib2](https://drive.google.com/uc?export=view&id=1HPrFJEJ3E_j_VPbFl6SOOjjixHIEdQPb)
+![sha](https://drive.google.com//uc?export=view&id=1HPrFJEJ3E_j_VPbFl6SOOjjixHIEdQPb) ![адаптерLib2](https://drive.google.com/uc?export=view&id=1HPrFJEJ3E_j_VPbFl6SOOjjixHIEdQPb)
 
 
 # Добавление в проект.
