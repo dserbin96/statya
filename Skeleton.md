@@ -64,7 +64,7 @@ dependencies {
 
 Пример использования *SK_animationFinishType="gradient"* и *SK_animationNormalType="alpha"*:
 
-![альфаГрадиент2](https://drive.google.com/uc?export=view&id=1HPrFJEJ3E_j_VPbFl6SOOjjixHIEdQPb)
+![альфаГрадиент2](https://drive.google.com/uc?export=view&id=1xc9wPNgHpTST148TV3XLaz1J3Q-qr74W)
 
  ~~~ xml
 <io.rmiri.skeleton.SkeletonGroup
