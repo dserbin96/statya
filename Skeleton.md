@@ -28,7 +28,9 @@
 
 
 # Добавление в проект.
+
  ~~~ gradle
+
 repositories {
     ...
     maven { url "https://jitpack.io" } 
@@ -38,10 +40,13 @@ dependencies {
     ...
     implementation 'com.github.rasoulmiri:Skeleton:v1.0.9' 
 }
-~~~~
+
+~~~
 
 # SkeletonAndroid в xml файле.
- ~~~ xml
+
+~~~ xml
+
     <io.rmiri.skeleton.SkeletonGroup xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:Skeleton="http://schemas.android.com/apk/res-auto"
         android:id="@+id/skeletoneGroup"
@@ -60,6 +65,7 @@ dependencies {
             <!--...-->       
         </io.rmiri.skeleton.SkeletonView>
     </io.rmiri.skeleton.SkeletonGroup>
+
 ~~~
 
 **SkeletonGroup** – контейнер, который включает в себя все используемые для этой анимации *views*. 
@@ -78,7 +84,8 @@ dependencies {
 </p>
 
 
- ~~~ xml
+~~~ xml
+
 <io.rmiri.skeleton.SkeletonGroup
     android:id="@+id/skeletonGroup"
     Skeleton:SK_animationFinishType="gradient"
@@ -86,6 +93,7 @@ dependencies {
     Skeleton:SK_backgroundMainColor="@android:color/transparent"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+ 
 ~~~
 
 * *SK_backgroundMainColor:* background всего *SkeletonGroup*
@@ -107,7 +115,8 @@ dependencies {
 </p>
 
 
- ~~~ xml
+~~~ xml
+
         <io.rmiri.skeleton.SkeletonView
             android:id="@+id/skeletonView"
             Skeleton:SK_cornerRadius="0dp"
@@ -148,8 +157,11 @@ dependencies {
                 android:textSize="@dimen/textSize"
                 tools:text="@string/description" />
         </io.rmiri.skeleton.SkeletonView>
+
 ~~~
+
 # Класс SkeletonGroup.
+
  Класс *SkeletonGroup* мы использовали в *xml* файле, он содержит следующие методы:
 * *startAnimation()* – запуск анимации
 * *finishAnimation()* – завершение анимации
@@ -157,7 +169,9 @@ dependencies {
 * *setShowSkeleton(true)* – включение анимации
 
 Также *SkeletonGroup* содержит свой *listener*
+
 ~~~ kotlin
+
 skeletoneGroup.setSkeletonListener(object : SkeletonGroup.SkeletonListener { 
   override fun onFinishAnimation() {       
         //... 
@@ -171,8 +185,11 @@ skeletoneGroup.setSkeletonListener(object : SkeletonGroup.SkeletonListener {
 ~~~
 
 # Применение Skeleton в RecyclerView.
+
 В версии *v1.0.9* появилась возможность применять данную анимацию в *RecyclerView*. Для этого необходимо создать свой собственный адаптер наследуясь от *AdapterSkeleton*, код будет выглядеть следующим образом:
+
  ~~~ kotlin 
+ 
 class MyAndroidSkeletonAdapter() : AdapterSkeleton<ExampleViewModel, ViewHolder>() {
 
     constructor(context: Context,
@@ -213,22 +230,26 @@ class MyAndroidSkeletonAdapter() : AdapterSkeleton<ExampleViewModel, ViewHolder>
         }
     }
 }
+
 ~~~
 
 
 Интерфейс *isCanSetAdapterListener* – для создания анимации *SkeltonAdapter* должен знать размеры элемента внутри *RecyclerView*, после определения размера *listener* позволяет нам сетить адаптер в *RecyclerView*.
+
  ~~~java
+ 
 public interface IsCanSetAdapterListener {
     void isCanSet();
 }
-~~~
-Метод *measureHeightRecyclerViewAndItem* определяет состояние *RecyclerView* для использования анимации, передает параметры в *SkeletonConfig*. Класс *SkeletonConfig* предназначен для работы c *RecyclerView*, его метод *isSkeletonIsOn* необходим для завершения анимации.
 
+~~~
+
+Метод *measureHeightRecyclerViewAndItem* определяет состояние *RecyclerView* для использования анимации, передает параметры в *SkeletonConfig*. Класс *SkeletonConfig* предназначен для работы c *RecyclerView*, его метод *isSkeletonIsOn* необходим для завершения анимации.
 
 <p align="center">
   <img src="https://drive.google.com/uc?export=view&id=1HPrFJEJ3E_j_VPbFl6SOOjjixHIEdQPb)
 </p>
 
-
 # Вывод
+
 Проведя большое количество времени в поисках нужной анимации, библиотека *Skeleton Android* оказалась лучшей по сравнению с остальными. Она довольно просто сочетается с различными *View*, в том числе и с *RecyclerView*. Содержит в себе множество различных методов и атрибутов, которые позволяют настроить поведение анимации. Несмотря на свою простоту, библиотека мощная, хоть и не имеет большое количество звезд.
