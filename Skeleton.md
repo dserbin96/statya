@@ -4,8 +4,9 @@
 
 **Скелетная анимация** – это технология анимации, в которой объект представлен двумя частями: поверхностной представление (что называется кожа или сетка) и совокупность взаимосвязанных частей (так называемый скелет). Скелетная анимация часто используется в разработке, например при создание компьютерных игр. Так же ее можно применить и в *Android* разработке.  Одним из таких примеров является применение *Skeleton Android*.
  
-
-![Пример2](https://drive.google.com/uc?export=view&id=1NRc3tbKCl3vxTL-XsTitY_Sdz8M2Of-Y)
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1NRc3tbKCl3vxTL-XsTitY_Sdz8M2Of-Y"/>
+ </p>
 
 # Сравнение с другими библиотеками.
 
@@ -67,7 +68,9 @@ dependencies {
 
 Пример использования *SK_animationFinishType="gradient"* и *SK_animationNormalType="alpha"*:
 
-![альфаГрадиент2](https://drive.google.com/uc?export=view&id=1xc9wPNgHpTST148TV3XLaz1J3Q-qr74W)
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1xc9wPNgHpTST148TV3XLaz1J3Q-qr74W"
+</p>
 
  ~~~ xml
 <io.rmiri.skeleton.SkeletonGroup
@@ -92,7 +95,9 @@ dependencies {
 
 Пример испоьзования *SK_shapeType="oval"* и *SK_shapeType="text"*:
 
-![текстКруг2](https://drive.google.com/uc?export=view&id=1YUpsAIHmvUw1h9Zw5YgtW1ivza-Y1BRE)
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1YUpsAIHmvUw1h9Zw5YgtW1ivza-Y1BRE"
+</p>
 
  ~~~ xml
         <io.rmiri.skeleton.SkeletonView
@@ -211,7 +216,9 @@ public interface IsCanSetAdapterListener {
 ~~~
 Метод *measureHeightRecyclerViewAndItem* определяет состояние *RecyclerView* для использования анимации, передает параметры в *SkeletonConfig*. Класс *SkeletonConfig* предназначен для работы c *RecyclerView*, его метод *isSkeletonIsOn* необходим для завершения анимации.
 
-![адаптерLib2](https://drive.google.com/uc?export=view&id=1HPrFJEJ3E_j_VPbFl6SOOjjixHIEdQPb)
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1HPrFJEJ3E_j_VPbFl6SOOjjixHIEdQPb)
+</p>
 
 # Вывод
 Проведя большое количество времени в поисках нужной анимации, библиотека *Skeleton Android* оказалась лучшей по сравнению с остальными. Она довольно просто сочетается с различными *View*, в том числе и с *RecyclerView*. Содержит в себе множество различных методов и атрибутов, которые позволяют настроить поведение анимации. Несмотря на свою простоту, библиотека мощная, хоть и не имеет большое количество звезд.
