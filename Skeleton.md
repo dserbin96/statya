@@ -41,11 +41,11 @@ dependencies {
     implementation 'com.github.rasoulmiri:Skeleton:v1.0.9' 
 }
 
-~~~
+ ~~~
 
 # SkeletonAndroid в xml файле.
 
-~~~ xml
+ ~~~ xml
 
 <io.rmiri.skeleton.SkeletonGroup xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:Skeleton="http://schemas.android.com/apk/res-auto"
@@ -66,7 +66,7 @@ dependencies {
     </io.rmiri.skeleton.SkeletonView>
 </io.rmiri.skeleton.SkeletonGroup>
 
-~~~
+ ~~~
 
 **SkeletonGroup** – контейнер, который включает в себя все используемые для этой анимации *views*. 
 Ниже приведен неполный список атрибутов *SkeletonGroup*:
@@ -84,7 +84,7 @@ dependencies {
 </p>
 
 
-~~~ xml
+ ~~~ xml
 
 <io.rmiri.skeleton.SkeletonGroup
     android:id="@+id/skeletonGroup"
@@ -94,7 +94,7 @@ dependencies {
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
  
-~~~
+ ~~~
 
 * *SK_backgroundMainColor:* background всего *SkeletonGroup*
 * *SK_BackgroundViewsColor:* background *SkeletonViews* внутри *SkeletonGroup*
@@ -115,7 +115,7 @@ dependencies {
 </p>
 
 
-~~~ xml
+ ~~~ xml
 
 <io.rmiri.skeleton.SkeletonView
     android:id="@+id/skeletonView"
@@ -158,7 +158,7 @@ dependencies {
         tools:text="@string/description" />
 </io.rmiri.skeleton.SkeletonView>
 
-~~~
+ ~~~
 
 # Класс SkeletonGroup.
 
@@ -170,7 +170,7 @@ dependencies {
 
 Также *SkeletonGroup* содержит свой *listener*
 
-~~~ kotlin
+ ~~~ kotlin
 
 skeletoneGroup.setSkeletonListener(object : SkeletonGroup.SkeletonListener { 
   override fun onFinishAnimation() {       
@@ -182,7 +182,7 @@ skeletoneGroup.setSkeletonListener(object : SkeletonGroup.SkeletonListener {
   }
 })
 
-~~~
+ ~~~
 
 # Применение Skeleton в RecyclerView.
 
@@ -231,7 +231,7 @@ class MyAndroidSkeletonAdapter() : AdapterSkeleton<ExampleViewModel, ViewHolder>
     }
 }
 
-~~~
+ ~~~
 
 
 Интерфейс *isCanSetAdapterListener* – для создания анимации *SkeltonAdapter* должен знать размеры элемента внутри *RecyclerView*, после определения размера *listener* позволяет нам сетить адаптер в *RecyclerView*.
@@ -242,7 +242,7 @@ public interface IsCanSetAdapterListener {
     void isCanSet();
 }
 
-~~~
+ ~~~
 
 Метод *measureHeightRecyclerViewAndItem* определяет состояние *RecyclerView* для использования анимации, передает параметры в *SkeletonConfig*. Класс *SkeletonConfig* предназначен для работы c *RecyclerView*, его метод *isSkeletonIsOn* необходим для завершения анимации.
 
