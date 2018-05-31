@@ -47,24 +47,24 @@ dependencies {
 
 ~~~ xml
 
-    <io.rmiri.skeleton.SkeletonGroup xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:Skeleton="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/skeletoneGroup"
+<io.rmiri.skeleton.SkeletonGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Skeleton="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/skeletoneGroup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <io.rmiri.skeleton.SkeletonView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content">            
+        <!--...-->         
+    </io.rmiri.skeleton.SkeletonView>
 
-        <io.rmiri.skeleton.SkeletonView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">            
-            <!--...-->         
-        </io.rmiri.skeleton.SkeletonView>
-
-        <io.rmiri.skeleton.SkeletonView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">   
-            <!--...-->       
-        </io.rmiri.skeleton.SkeletonView>
-    </io.rmiri.skeleton.SkeletonGroup>
+    <io.rmiri.skeleton.SkeletonView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">   
+        <!--...-->       
+    </io.rmiri.skeleton.SkeletonView>
+</io.rmiri.skeleton.SkeletonGroup>
 
 ~~~
 
@@ -117,46 +117,46 @@ dependencies {
 
 ~~~ xml
 
-        <io.rmiri.skeleton.SkeletonView
-            android:id="@+id/skeletonView"
-            Skeleton:SK_cornerRadius="0dp"
-            Skeleton:SK_padding="0dp"
-            Skeleton:SK_shapeType="oval"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+<io.rmiri.skeleton.SkeletonView
+    android:id="@+id/skeletonView"
+    Skeleton:SK_cornerRadius="0dp"
+    Skeleton:SK_padding="0dp"
+    Skeleton:SK_shapeType="oval"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/astra" />
-        </io.rmiri.skeleton.SkeletonView>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/astra" />
+</io.rmiri.skeleton.SkeletonView>
 
-        <io.rmiri.skeleton.SkeletonView
-            Skeleton:SK_cornerRadius="@dimen/radius"
-            Skeleton:SK_shapeType="text"
-            Skeleton:SK_textLineHeight="@dimen/margin"
-            Skeleton:SK_textLineLastWidth="threeQuarters"
-            Skeleton:SK_textLineNumber="3"
-            Skeleton:SK_textLineSpaceVertical="@dimen/line_vertical"
-            Skeleton:layout_constraintBottom_toBottomOf="parent"
-            Skeleton:layout_constraintEnd_toEndOf="parent"
-            Skeleton:layout_constraintStart_toEndOf="@+id/skeletonView"
-            Skeleton:layout_constraintTop_toTopOf="parent"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_margin="@dimen/margin_small"
-            android:gravity="center">
+<io.rmiri.skeleton.SkeletonView
+    Skeleton:SK_cornerRadius="@dimen/radius"
+    Skeleton:SK_shapeType="text"
+    Skeleton:SK_textLineHeight="@dimen/margin"
+    Skeleton:SK_textLineLastWidth="threeQuarters"
+    Skeleton:SK_textLineNumber="3"
+    Skeleton:SK_textLineSpaceVertical="@dimen/line_vertical"
+    Skeleton:layout_constraintBottom_toBottomOf="parent"
+    Skeleton:layout_constraintEnd_toEndOf="parent"
+    Skeleton:layout_constraintStart_toEndOf="@+id/skeletonView"
+    Skeleton:layout_constraintTop_toTopOf="parent"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_margin="@dimen/margin_small"
+    android:gravity="center">
 
-            <TextView
-                android:id="@+id/tvText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/textSize"
-                tools:text="@string/description" />
-        </io.rmiri.skeleton.SkeletonView>
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textSize"
+        tools:text="@string/description" />
+</io.rmiri.skeleton.SkeletonView>
 
 ~~~
 
