@@ -67,8 +67,8 @@ dependencies {
 * *SK_animationAutoStart:*  если значение *true* то анимация будет происходить автоматически, *false* будет происходить при вызове метода *startAnimation* (по умолчанию *true*)
 * *SK_animationDuration:* время анимации (по умолчанию 1000 миллисекунд)
 * *SK_animationDirection:* как будет двигаться линия в анимации *RTL,LTR,BTT,TTB* (по умолчанию *LTR*)
-* *SK_animationNormalType:* какая анимация будет происходит во время ее выполения: *none,alpha,gradient* ( по умолчанию *gradient*)
-* *SK_animationFinishType:* какая анимация будет происходит в конце ее выполения: *none,alpha,gradient* ( по умолчанию *gradient*)
+* *SK_animationNormalType:* какая анимация будет происходит во время ее выполнения: *none,alpha,gradient* ( по умолчанию *gradient*)
+* *SK_animationFinishType:* какая анимация будет происходит в конце ее выполнения: *none,alpha,gradient* ( по умолчанию *gradient*)
 
 Пример использования *SK_animationFinishType="gradient"* и *SK_animationNormalType="alpha"*:
 
@@ -93,13 +93,13 @@ dependencies {
 * *SK_highLightColor:* цвет линии в анимации
 
 **SkeletonView** – обертка над *view*. Он также имеет собственные атрибуты:
-* *SK_shapeType:* тип анимации *skeleton* для конкретного *view: rect, oval,text* ( по умолчанию *rect*)
-* *SK_textLineNumber:* количество линий отображаемых при типе *text* (поумолчанию 3)
+* *SK_shapeType:* тип анимации *skeleton* для конкретного *view: rect, oval, text* ( по умолчанию *rect*)
+* *SK_textLineNumber:* количество линий отображаемых при типе *text* (по умолчанию 3)
 * *SK_textLineLastWidth:* ширина последней отображаемой строчки при типе text: *full, threeQuarters, half, quarter* (по умолчанию *threeQuarters*)
 * *SK_textLineHeight:* высота линий при типе text (по умолчанию 24dp)
 * *SK_textLineSpaceVertical:* расстояние между линиями при типе text (по умолчанию threeQuarters 4dp)
 
-Пример испоьзования *SK_shapeType="oval"* и *SK_shapeType="text"*:
+Пример использования *SK_shapeType="oval"* и *SK_shapeType="text"*:
 
 
 <p align="center">
@@ -216,7 +216,7 @@ class MyAndroidSkeletonAdapter() : AdapterSkeleton<ExampleViewModel, ViewHolder>
 ~~~
 
 
-Интерфейс *isCanSetAdapterListener* – для создания анимации *SkeltonAdapter* должен знать размеры элмента внутри *RecyclerView*, после определения размера *listener* позволяет нам сетить адаптер в *RecyclerView*.
+Интерфейс *isCanSetAdapterListener* – для создания анимации *SkeltonAdapter* должен знать размеры элемента внутри *RecyclerView*, после определения размера *listener* позволяет нам сетить адаптер в *RecyclerView*.
  ~~~java
 public interface IsCanSetAdapterListener {
     void isCanSet();
