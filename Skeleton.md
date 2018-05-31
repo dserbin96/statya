@@ -19,6 +19,7 @@
 
 <p align="center">
   <img src="https://drive.google.com//uc?export=view&id=1hIflN9-nHmTk-ftoOK3d6GiLoDRbfwqh"/>
+  <img src="https://drive.google.com/uc?export=view&id=11wuHb2DBSflzo8IYEm90_KO0y7Dch0qn"/>
 </p>
 
 # Добавление в проект.
