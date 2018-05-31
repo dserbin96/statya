@@ -30,7 +30,6 @@
 # Добавление в проект.
 
  ~~~ gradle
-
 repositories {
     ...
     maven { url "https://jitpack.io" } 
@@ -40,13 +39,11 @@ dependencies {
     ...
     implementation 'com.github.rasoulmiri:Skeleton:v1.0.9' 
 }
-
  ~~~
 
 # SkeletonAndroid в xml файле.
 
  ~~~ xml
-
 <io.rmiri.skeleton.SkeletonGroup xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:Skeleton="http://schemas.android.com/apk/res-auto"
     android:id="@+id/skeletoneGroup"
@@ -65,7 +62,6 @@ dependencies {
         <!--...-->       
     </io.rmiri.skeleton.SkeletonView>
 </io.rmiri.skeleton.SkeletonGroup>
-
  ~~~
 
 **SkeletonGroup** – контейнер, который включает в себя все используемые для этой анимации *views*. 
@@ -85,7 +81,6 @@ dependencies {
 
 
  ~~~ xml
-
 <io.rmiri.skeleton.SkeletonGroup
     android:id="@+id/skeletonGroup"
     Skeleton:SK_animationFinishType="gradient"
@@ -93,7 +88,6 @@ dependencies {
     Skeleton:SK_backgroundMainColor="@android:color/transparent"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
- 
  ~~~
 
 * *SK_backgroundMainColor:* background всего *SkeletonGroup*
@@ -116,7 +110,6 @@ dependencies {
 
 
  ~~~ xml
-
 <io.rmiri.skeleton.SkeletonView
     android:id="@+id/skeletonView"
     Skeleton:SK_cornerRadius="0dp"
@@ -157,7 +150,6 @@ dependencies {
         android:textSize="@dimen/textSize"
         tools:text="@string/description" />
 </io.rmiri.skeleton.SkeletonView>
-
  ~~~
 
 # Класс SkeletonGroup.
@@ -171,7 +163,6 @@ dependencies {
 Также *SkeletonGroup* содержит свой *listener*
 
  ~~~ kotlin
-
 skeletoneGroup.setSkeletonListener(object : SkeletonGroup.SkeletonListener { 
   override fun onFinishAnimation() {       
         //... 
@@ -181,7 +172,6 @@ skeletoneGroup.setSkeletonListener(object : SkeletonGroup.SkeletonListener {
         //...    
   }
 })
-
  ~~~
 
 # Применение Skeleton в RecyclerView.
@@ -189,7 +179,6 @@ skeletoneGroup.setSkeletonListener(object : SkeletonGroup.SkeletonListener {
 В версии *v1.0.9* появилась возможность применять данную анимацию в *RecyclerView*. Для этого необходимо создать свой собственный адаптер наследуясь от *AdapterSkeleton*, код будет выглядеть следующим образом:
 
  ~~~ kotlin 
- 
 class MyAndroidSkeletonAdapter() : AdapterSkeleton<ExampleViewModel, ViewHolder>() {
 
     constructor(context: Context,
@@ -230,18 +219,15 @@ class MyAndroidSkeletonAdapter() : AdapterSkeleton<ExampleViewModel, ViewHolder>
         }
     }
 }
-
  ~~~
 
 
 Интерфейс *isCanSetAdapterListener* – для создания анимации *SkeltonAdapter* должен знать размеры элемента внутри *RecyclerView*, после определения размера *listener* позволяет нам сетить адаптер в *RecyclerView*.
 
  ~~~java
- 
 public interface IsCanSetAdapterListener {
     void isCanSet();
 }
-
  ~~~
 
 Метод *measureHeightRecyclerViewAndItem* определяет состояние *RecyclerView* для использования анимации, передает параметры в *SkeletonConfig*. Класс *SkeletonConfig* предназначен для работы c *RecyclerView*, его метод *isSkeletonIsOn* необходим для завершения анимации.
