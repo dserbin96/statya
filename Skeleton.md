@@ -17,8 +17,9 @@
 
 **Слева - Shimmer от facebook, справа – Skeleton Android.*
 
-<div style="text-align:center"><img src ="https://drive.google.com//uc?export=view&id=1hIflN9-nHmTk-ftoOK3d6GiLoDRbfwqh" /></div>
-
+<p align="center">
+  <img src="https://drive.google.com//uc?export=view&id=1hIflN9-nHmTk-ftoOK3d6GiLoDRbfwqh"/>
+</p>
 
 # Добавление в проект.
  ~~~ gradle
