@@ -78,7 +78,7 @@ motion:touchAnchorSide – сторона элемента которую нуж
   <img src="https://drive.google.com//uc?export=view&id=1d35mCSkVzAH99y0u2QZUCpq0zjUKJzzO"/>
  </p>
 
-ConstraintSet
+# ConstraintSet.
 Теперь давайте посмотрим, как можно применить анимацию на экране с авторизацией.
 
 <p align="center">
