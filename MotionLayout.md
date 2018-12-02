@@ -426,7 +426,9 @@ class DrawerContent @JvmOverloads constructor(context: Context, attr: AttributeS
 * *motion:keyPositionType* – задает тип системы координат parentRelative, deltaRelative, pathRelative
 * *motion:percent[X/Y]* – координата (x,y) положения
 * *motion:target* – к какому элементу применяется кадр
+
 Еще добавился новый элемент в Constraint – CustomAttribute. Он предназначен для применения кастомных атрибутов, в данном случае используется backgroundColor. Он содержит свои собственные атрибуты
+
 * *motion:attributeName* – указывается какой атрибут будет применен
 * *motion: customColorValue/ customIntegerValue/ customFloatValue/ customStringValue/ customDimension/ customBoolean* – какое значение атрибута используется.
 Такая анимация будет выглядеть так (линиями указана траектория):
