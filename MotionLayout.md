@@ -428,7 +428,7 @@ motion: customColorValue/ customIntegerValue/ customFloatValue/ customStringValu
   <img src="https://drive.google.com//uc?export=view&id=1Y88hWi1zmNrxhyQmGZOKN6VxV0QAA8Gm"/>
  </p>
 
-Заключение
+# Заключение.
 В данной статье рассказана только часть возможностей MotionLayout, чтобы использовать такую анимацию с умом нужна фантазия. Библиотека очень мощная, она сама по себе во многом облегчает жизнь разработчику ведь теперь применяя ее мы можем убрать значительную часть кода в java и перенести ее в xml, что само по себе приятно. Я постарался показать на практике большинство плюшек данного layout-а, но библиотека слишком большая и многое здесь не написано. Остается ждать стабильной версии библиотеки. При на писании я опирался на 
 https://medium.com/google-developers/introduction-to-motionlayout-part-i-29208674b10d, https://developer.android.com/reference/android/support/constraint/motion/MotionLayout.
 Пример приложения https://github.com/dserbin96/MotionLayoutExample
