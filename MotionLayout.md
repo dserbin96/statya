@@ -75,7 +75,7 @@ motion:touchAnchorId – id элемента над которым происх�
 motion:touchAnchorSide – сторона элемента которую нужно свайпнуть (top / left / right / bottom)
 
 <p align="center">
-  <img src="https://drive.google.com/open?id=1d35mCSkVzAH99y0u2QZUCpq0zjUKJzzO"/>
+  <img src="https://drive.google.com/open?export=view&id=1d35mCSkVzAH99y0u2QZUCpq0zjUKJzzO"/>
  </p>
 
 ConstraintSet
@@ -241,7 +241,7 @@ MotionLayout и DrawerLayout
 MotionLayout отлично взаимодействует и с другими layout-ми, например с DrawerLayout.
 
 <p align="center">
-  <img src="https://drive.google.com/open?id=18h3TjuPyqHV8fNXKsFte7IhvpZKuyHCc"/>
+  <img src="https://drive.google.com/open?export=view&id=18h3TjuPyqHV8fNXKsFte7IhvpZKuyHCc"/>
  </p>
 
 Для создания подобной анимации нужно создать свой собственный layout унаследованный от MotionLayout и расширенный с помощью  DrawerLayout.DrawerListener.
@@ -289,7 +289,7 @@ OnClick
 Кроме onSwipe и setProgress воспроизводить анимацию можно с помощью onClick.
 
 <p align="center">
-  <img src="https://drive.google.com/open?id=1MME0BKHxk-VsmfF3UBsqUsZJsopfqOOE"/>
+  <img src="https://drive.google.com/open?export=view&id=1MME0BKHxk-VsmfF3UBsqUsZJsopfqOOE"/>
  </p>
 
 Анимация выглядит примерно так:
@@ -425,7 +425,7 @@ motion: customColorValue/ customIntegerValue/ customFloatValue/ customStringValu
 Такая анимация будет выглядеть так (линиями указана траектория):
 
 <p align="center">
-  <img src="https://drive.google.com/open?id=1Y88hWi1zmNrxhyQmGZOKN6VxV0QAA8Gm"/>
+  <img src="https://drive.google.com/open?export=view&id=1Y88hWi1zmNrxhyQmGZOKN6VxV0QAA8Gm"/>
  </p>
 
 Заключение
