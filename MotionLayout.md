@@ -40,7 +40,7 @@ Xml файл с версткой экрана:
  ~~~
 
 В нем содержится одна view черного цвета. При этом можно заметить, что в нем нет атрибутов указывающих на расположение элемента внутри контейнера, так как это не обязательно ведь за расположение элементов отвечает второй xml файл прописанный в MotionLayout
-    app:layoutDescription="@xml/transition_simple_example"
+* *app:layoutDescription="@xml/transition_simple_example"*
     
 Файл с анимацией расположен в папке xml ресурсов android.
 
@@ -64,15 +64,15 @@ Xml файл с версткой экрана:
  ~~~
 
 Элементы используемые в анимации:
-MotionScene – контейнер внутри которого прописываются анимация.
-Transition – элемент внутри которого прописывается переход от одного состояния в другое
-OnSwipe – элемент который поддерживает сенсорную обработку
+* *MotionScene* – контейнер внутри которого прописываются анимация.
+* *Transition* – элемент внутри которого прописывается переход от одного состояния в другое
+* *OnSwipe* – элемент который поддерживает сенсорную обработку
 Атрибуты используемые внутри элементов:
-motion:constraintSetStart – начальное состояние в анимации, внутри него может прописываться как layout, так и id для ConstraintSet(о нем поговорим чуть позже).
-motion:constraintSetEnd – аналогично предыдущему методу, но описывает конечное состояние в анимации.
-motion:dragDirection – в какую сторону идет перемещение (dragUp / dragDown | dragLeft / dragRight)
-motion:touchAnchorId – id элемента над которым происходит swipe
-motion:touchAnchorSide – сторона элемента которую нужно свайпнуть (top / left / right / bottom)
+* *motion:constraintSetStart* – начальное состояние в анимации, внутри него может прописываться как layout, так и id для ConstraintSet(о нем поговорим чуть позже).
+* *motion:constraintSetEnd* – аналогично предыдущему методу, но описывает конечное состояние в анимации.
+* *motion:dragDirection* – в какую сторону идет перемещение (dragUp / dragDown | dragLeft / dragRight)
+* *motion:touchAnchorId* – id элемента над которым происходит swipe
+* *motion:touchAnchorSide* – сторона элемента которую нужно свайпнуть (top / left / right / bottom)
 
 <p align="center">
   <img src="https://drive.google.com//uc?export=view&id=1d35mCSkVzAH99y0u2QZUCpq0zjUKJzzO"/>
@@ -232,12 +232,14 @@ motion:touchAnchorSide – сторона элемента которую нуж
 Здесь в MotionScene вместе с Transition прописывается ConstraintSet. Внутри него заключены Constraint-ы. ConstraintSet описывает набор ограничений, который будет принимать Constraint в одном из состояний (начальном или конечном). Constraint описывает ограничение для объекта ConstraintLayout указанного с помощью id и другие атрибуты, связанные с представлением. А также можно заметить некоторые атрибуты прописанные внутри Constraint: rotation, alpha, visibility. Эти атрибуты принимают значения, которые описаны в определенном состоянии. Кроме них используются и другие стандартные атрибуты:elevation,rotation[X/Y],translation[X/Y/Z],scaleX/Y.
 Атрибуты MotonLayout
 В самом MotionLayout есть атрибуты :
-app:layoutDescription - указывает на файл MotionScene
-app:applyMotionScene - применяете или нет MotionScene [по умолчанию=true]
-app:showPaths - отображать или не отображать пути движения [по умолчанию=false].
-app:progress - укажите шаг перехода от 0 к 1
-app:currentState - использование определенного набора ограничений
-MotionLayout и DrawerLayout
+* *app:layoutDescription* - указывает на файл MotionScene
+* *app:applyMotionScene* - применяете или нет MotionScene [по умолчанию=true]
+* *app:showPaths* - отображать или не отображать пути движения [по умолчанию=false].
+* *app:progress* - укажите шаг перехода от 0 к 1
+* *app:currentState* - использование определенного набора ограничений
+
+# MotionLayout и DrawerLayout.
+
 MotionLayout отлично взаимодействует и с другими layout-ми, например с DrawerLayout.
 
 <p align="center">
@@ -285,14 +287,16 @@ class DrawerContent @JvmOverloads constructor(context: Context, attr: AttributeS
  ~~~
 
 Можно заметить, что внутри Transition кроме атрибутов ничего нет. Нам не нужно нажимать на кнопку или делать свайп для включения анимации, за ходом анимации теперь отвечает setProgress(float pos).
-OnClick
+
+# OnClick.
+
 Кроме onSwipe и setProgress воспроизводить анимацию можно с помощью onClick.
 
+Анимация выглядит примерно так:
 <p align="center">
   <img src="https://drive.google.com//uc?export=view&id=1MME0BKHxk-VsmfF3UBsqUsZJsopfqOOE"/>
  </p>
 
-Анимация выглядит примерно так:
  ~~~kotlin
 <Transition
     motion:constraintSetEnd="@id/end"
@@ -314,9 +318,10 @@ OnClick
  ~~~
 
 В этом коде используется onClick, он позволяет реагировать на нажатие кнопки. В нем используются следующие атрибуты:
-motion:mode – Направление кнопки для перемещения анимации  transitionToEnd, toggle, transitionToStart, jumpToEnd, jumpToStart
-motion:target – какой объект реагирует на нажатие
-Промежуточное состояние MotionLayout.
+* *motion:mode* – Направление кнопки для перемещения анимации  transitionToEnd, toggle, transitionToStart, jumpToEnd, jumpToStart
+* *motion:target* – какой объект реагирует на нажатие
+
+# Промежуточное состояние MotionLayout.
 Кроме начального и конечного состояния MotionLayout есть промежуточное состояние. Оно прописывается в Transition
 
  ~~~kotlin
@@ -412,16 +417,16 @@ motion:target – какой объект реагирует на нажатие
  ~~~
 
 О каждом элементе внутри Transition по подробнее:
-KeyFrameSet – описывает набор ключевых значений которые влияют на анимацию
-KeyPosition – положение макета во время анимации
+* *KeyFrameSet* – описывает набор ключевых значений которые влияют на анимацию
+* *KeyPosition* – положение макета во время анимации
 Атрибуты которые используют KeyFrameSet, KeyPosition:
-motion:framePosition – прогресс анимации от 0 до 100
-motion:keyPositionType – задает тип системы координат parentRelative, deltaRelative, pathRelative
-motion:percent[X/Y] – координата (x,y) положения
-motion:target – к какому элементу применяется кадр
+* *motion:framePosition* – прогресс анимации от 0 до 100
+* *motion:keyPositionType* – задает тип системы координат parentRelative, deltaRelative, pathRelative
+* *motion:percent[X/Y]* – координата (x,y) положения
+* *motion:target* – к какому элементу применяется кадр
 Еще добавился новый элемент в Constraint – CustomAttribute. Он предназначен для применения кастомных атрибутов, в данном случае используется backgroundColor. Он содержит свои собственные атрибуты
-motion:attributeName – указывается какой атрибут будет применен
-motion: customColorValue/ customIntegerValue/ customFloatValue/ customStringValue/ customDimension/ customBoolean – какое значение атрибута используется.
+* *motion:attributeName* – указывается какой атрибут будет применен
+* *motion: customColorValue/ customIntegerValue/ customFloatValue/ customStringValue/ customDimension/ customBoolean* – какое значение атрибута используется.
 Такая анимация будет выглядеть так (линиями указана траектория):
 
 <p align="center">
@@ -431,4 +436,4 @@ motion: customColorValue/ customIntegerValue/ customFloatValue/ customStringValu
 # Заключение.
 В данной статье рассказана только часть возможностей MotionLayout, чтобы использовать такую анимацию с умом нужна фантазия. Библиотека очень мощная, она сама по себе во многом облегчает жизнь разработчику ведь теперь применяя ее мы можем убрать значительную часть кода в java и перенести ее в xml, что само по себе приятно. Я постарался показать на практике большинство плюшек данного layout-а, но библиотека слишком большая и многое здесь не написано. Остается ждать стабильной версии библиотеки. При на писании я опирался на 
 https://medium.com/google-developers/introduction-to-motionlayout-part-i-29208674b10d, https://developer.android.com/reference/android/support/constraint/motion/MotionLayout.
-Пример приложения https://github.com/dserbin96/MotionLayoutExample
+Пример приложения: https://github.com/dserbin96/MotionLayoutExample.
