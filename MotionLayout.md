@@ -419,7 +419,9 @@ class DrawerContent @JvmOverloads constructor(context: Context, attr: AttributeS
 О каждом элементе внутри Transition по подробнее:
 * *KeyFrameSet* – описывает набор ключевых значений которые влияют на анимацию
 * *KeyPosition* – положение макета во время анимации
+
 Атрибуты которые используют KeyFrameSet, KeyPosition:
+
 * *motion:framePosition* – прогресс анимации от 0 до 100
 * *motion:keyPositionType* – задает тип системы координат parentRelative, deltaRelative, pathRelative
 * *motion:percent[X/Y]* – координата (x,y) положения
